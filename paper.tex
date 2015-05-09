@@ -1,0 +1,98 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage{epsfig,endnotes}
+\usepackage{times}
+\usepackage{fullpage}
+\usepackage{xspace}
+\usepackage{cite}
+\usepackage{ifpdf}
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage{wrapfig}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+
+\usepackage[labelfont=bf]{caption}
+\usepackage{flushend}
+
+% Better typewriter font:
+\usepackage{inconsolata}
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{3pt}{3pt}
+\titlespacing{\subsection}{0pt}{2pt}{2pt}
+\titlespacing{\subsubsection}{0pt}{1pt}{1pt}
+
+\newif\ifrev
+%%%%%%%%%%%%%%%%%%
+% COMMENT OUT NEXT LINE TO HIDE TODOs
+\revtrue
+%%%%%%%%%%%%%%%%%%
+
+
+\newif\iftr
+%%%%%%%%%%%%%%%%%%
+% comment out next line to HIDE TR CONTENT (to create an ATC submission version)
+% \trtrue
+\iftr
+ \newcommand{\tr}[1]{{#1}}
+\else
+ \newcommand{\tr}[1]{}
+\fi 
+%%%%%%%%%%%%%%%%%%
+
+\newcommand{\urlwofont}[1]{\underline{\urlstyle{same}\url{#1}}}
+
+\ifrev
+  \newcommand{\yanyan}[1]{{\color{blue} [Yanyan: #1]}}
+  \newcommand{\cappos}[1]{{\color{red} [Justin: #1]}}
+  \newcommand{\ivan}[1]{{\color{cyan} [Ivan: #1]}}
+  \newcommand{\todo}[1]{{\color{red} [todo: #1]}}
+  \newcommand{\linda}[1]{{\color{magenta} [Linda: #1]}}
+\else
+  \newcommand{\yanyan}[1]{}
+  \newcommand{\cappos}[1]{}
+  \newcommand{\ivan}[1]{}
+  \newcommand{\todo}[1]{}
+  \newcommand{\linda}[1]{}
+\fi
+
+
+\newcommand{\sysname}{Sensibility testbed\xspace}
+\newcommand{\sensor}{sensor...\xspace}
+\newcommand{\censor}{ICLab\xspace}
+\newcommand{\router}{BISmark\xspace}
+\newcommand{\toma}{ToMaTo\xspace}
+\newcommand{\eat}[1]{}
+
+\newcommand{\maple}{\raisebox{4pt}{\includegraphics[width=5.5pt]{maple}}}
+
+%% set itemize indent
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=0.15in}
+
+\begin{document}
+
+\title{\bf Privacy-preserving Experimentation with Sensibility Testbed}
+\author{
+Yanyan Zhuang\maple${}^{ny}$ \qquad Albert Rafetseder${}^{ny}$ \qquad Ivan Beschastnikh\maple \qquad Justin Cappos${}^{ny}$ \\
+${}^{ny}$\,New York University, \maple\,University of British Columbia\\
+%% \resizebox{\textwidth}{!}{\href{mailto:jcappos@nyu.edu,yyzh@cs.ubc.ca,ar3945@nyu.edu,bestchai@cs.ubc.ca}%
+%% {\texttt{jcappos@nyu.edu,yyzh@cs.ubc.ca,ar3945@nyu.edu,bestchai@cs.ubc.ca}}}
+}
+
+\date{}
+\maketitle
+\thispagestyle{empty}
+
+\input{abstract}
+\input{introduction}
+\input{design}
+
+%\newpage
+{\small \bibliographystyle{abbrv} \bibliography{paper}} 
+
+
+\end{document}

@@ -1,0 +1,50 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Today's end-user mobile devices have become indispensable gadgets in people's 
+everyday life. A greater variety of online activities are increasingly conducted on 
+mobile devices. As a result, the Internet architecture, end-user 
+traffic patterns, etc., have evolved rapidly over the past few years. To understand 
+the complex, underlying structure of mobile Internet, and 
+to study how new applications and services can perform better, network researchers 
+need to collect and study datasets from end-user mobile devices. 
+
+Mobile devices %have become indispensable gadgets in people's everyday life. 
+are equipped with sensors\footnote{In this work, sensors are broadly defined 
+as the hardware components that can record phenomena about the physical 
+world, such as WiFi/cellular network, GPS location, movement acceleration, etc.} 
+that can provide useful dataset for research. 
+%Network researchers can perform experiments by 
+%collect sensor data from these end-user mobile devices to study 
+%how new applications and services can provide better performance. 
+For example, 
+wireless researchers need to know the coverage of a cellular service in an urban 
+district compared to a rural area, whether there exist any service blind spots
+with weak cellular signal strength, and so on. The data collected
+can generate useful information for service providers, policy 
+makers and researchers to enhance network research and the service provided.
+
+However, privacy and security issues have traditionally been the 
+obstacles to sharing sensor data. First, sensor data can reveal device 
+owners' personal information and result in privacy concerns. Second, potential 
+bugs in the research experiment can damage end users' personal devices
+and cause security issues. 
+Due to these privacy and security risks, researchers often choose to recruit 
+participants within a trusted group, e.g., students, colleagues and friends. 
+The data collected cannot represent real-world scenarios, 
+and the researchers are not able to test their hypothesis at a large scale. 
+
+To address these challenges, we 
+design and implement \sysname~\cite{sensibility}, an Internet-wide 
+measurement testbed for mobile devices. \sysname enables network 
+researchers to unobtrusively collect data 
+from the sensors on the device, such as GPS, Bluetooth, battery information, 
+accelerometer, light, and orientation, etc. More importantly, it
+mediates the process for device owners to make their devices 
+available while preserving their privacy, and enables researchers to 
+securely experiment with end user mobile device and data. 
+This work is a first step towards protecting the security and privacy of end-user 
+devices, and lowering the technical barriers to network research done 
+through wide-area sensor data collection. 
